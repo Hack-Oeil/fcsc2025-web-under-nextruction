@@ -1,0 +1,14 @@
+services:
+  under-nextruction-app:
+    image: anssi/fcsc2025-web-under-nextruction-app:latest
+    environment:
+      - HOOS_CTF_EMAIL=${HOOS_CTF_EMAIL:-}
+      - HOOS_CTF_USERNAME=${HOOS_CTF_USERNAME:-}
+      - LANGUAGE=${LANGUAGE:-fr}
+    labels:
+      ho.ctf.cyrhades: "challenge"
+    ports:
+      - ${PORT}:8000
+
+  under-nextruction-flag:
+    image: anssi/fcsc2025-web-under-nextruction-flag:latest
